@@ -1,114 +1,107 @@
-# Aily Agent Prototyper
+# AilyLabs Insights Platform - Prototype
 
-A mobile-first web app for building interactive agent prototypes in Aily's decision intelligence platform.
+A web application prototype featuring Story Card Modal with 3 display options and Personalizable Playlists functionality.
 
-## CFO Cash Optimizer Agent
+## Features
 
-The CFO Cash Optimizer Agent helps optimize cash flow by improving FCF conversion rates through strategic management of DSO, DPO, and DIO.
+### 1. Story Card Modal (3 Options)
+Interactive story cards with three display variants:
+- **Teaser Card** - Minimal, curiosity-driven design
+- **Impact Card** - Detailed impact analysis
+- **Driver Card** - Root cause and driver analysis
 
-### Features
+Users can toggle between these views and deep dive into Super Agent analysis.
 
-#### Navigation Flow
-1. **Welcome Screen** - Introduction to agent capabilities
-2. **Trigger/Impact Screen** - Shows primary KPI opportunity with insights modal
-3. **Decision Levers** - Choose time period (1 year / 3 years) and strategy (Aggressive / Balanced)
-4. **Scenario Modal** - Multi-page flow showing:
-   - Impact Assessment with chart
-   - Implementation Road (2 pages)
-   - TRT Assessment
+### 2. Personalizable Playlists ("Plailists")
+Create, manage, and share dynamic collections of storytelling insights:
+- **Quick Start** - AI-generated playlists based on user profile and meetings
+- **My Plailists** - User-created personalized collections
+- **Create New Plailist** - Natural language search to find relevant stories
+- **Edit & Personalize** - Add stories, clone, and reorder playlists
+- **Meeting Mode** - Full-screen presentation mode
 
-#### Interactions
-- **Swipe gestures** - Navigate through main flow by swiping left/right
-- **Time period toggle** - Changes metrics and scenarios (1 year vs 3 years)
-- **Strategy selection** - Choose between Aggressive or Balanced approach
-- **Modals** - Open insights and scenario details, swipe down to dismiss
-- **Commit decision** - "LET'S DO IT!" button to proceed to implementation
+## Tech Stack
 
-### Tech Stack
 - React 19.1
 - Vite 7.1
-- Recharts - For bar charts
-- react-swipeable - For touch gestures
-- CSS with custom properties - Mobile-first responsive design
+- React Router DOM - For navigation
+- CSS Modules - Component-specific styling
+- LocalStorage - For playlist persistence
 
-### Project Structure
+## Project Structure
 
 ```
 src/
 ├── components/
-│   ├── AgentContainer.jsx      # Main container with swipe navigation
-│   ├── Welcome.jsx              # Welcome screen
-│   ├── TriggerImpact.jsx        # Impact/trigger screen
-│   ├── DecisionLevers.jsx       # Scenario selection
-│   ├── Modal.jsx                # Reusable modal container
-│   ├── InsightsModal.jsx        # Context insights
-│   ├── ScenarioModal.jsx        # Scenario flow container
-│   ├── ImpactAssessment.jsx     # Scenario details with chart
-│   ├── ImplementationRoad.jsx   # Implementation pages
-│   ├── TRTAssessment.jsx        # Team assessment
-│   ├── NavigationDots.jsx       # Page indicator
-│   └── agent.css                # Agent-specific styles
-├── data/
-│   └── cfoAgent.js              # Agent data configuration
-├── App.jsx                      # Main app entry
-├── App.css                      # Global app styles
-└── index.css                    # Base CSS variables & resets
+│   ├── StoryCardModal.jsx          # Story card modal with 3 options
+│   ├── storyCards/
+│   │   ├── TeaserCard.jsx         # Teaser view
+│   │   ├── ImpactCard.jsx         # Impact view
+│   │   └── DriverCard.jsx        # Driver view
+│   ├── PlaylistsPage.jsx          # Main playlists dashboard
+│   ├── PlaylistCreator.jsx         # Create new playlist
+│   ├── PlaylistEditor.jsx         # Edit playlist
+│   ├── PlaylistDetailPage.jsx     # View playlist details
+│   └── ...                        # Other components
+├── pages/
+│   ├── PlaylistsPage.jsx          # Main playlists page
+│   ├── PlaylistDetailPage.jsx     # Playlist detail view
+│   └── ...                        # Other pages
+├── services/
+│   ├── playlistService.js         # Playlist CRUD operations
+│   ├── aiPlaylistService.js       # AI playlist generation
+│   └── recSysOrchestrator.js      # Story generation
+└── data/
+    └── playlistData.js            # Playlist data structures
 ```
 
-### Data Structure
-
-The agent data is configured in `src/data/cfoAgent.js` with the following structure:
-
-- **welcome** - Welcome page content
-- **trigger** - Impact/trigger page content
-- **insights** - Context modal content
-- **scenarios** - Time periods and strategies
-  - Each strategy contains:
-    - Metrics (FCF, conversion rate)
-    - Impact assessment data
-    - Chart data
-    - Implementation road pages
-    - TRT assessment
-
-### Running the App
+## Running the App
 
 ```bash
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### Design Philosophy
+## Key Features
 
-- Mobile-first (optimized for iPhone size)
-- Dark theme with teal/green accents
-- Glassmorphism effects
-- Touch-friendly interactions
-- Simple, functional components
-- Data-driven pages
+### Story Card Modal
+- Toggle between Teaser, Impact, and Driver views
+- Deep dive into Super Agent analysis
+- Responsive design
 
-### Key Interactions
+### Personalizable Playlists
+- **Quick Start Tab**: AI-generated playlists for first-time users
+- **My Plailists Tab**: User-created collections
+- **Create Flow**: Natural language search → Select stories → Edit order → Save
+- **Edit Options**: Add stories, clone playlist, edit details
+- **Meeting Mode**: Full-screen presentation
 
-1. **Main Flow Navigation**: Swipe left/right to move between Welcome → Trigger → Decision Levers
-2. **Insights Modal**: Tap the 💡 icon on the Trigger screen to view competitor insights
-3. **Time Period Toggle**: Switch between 1 year and 3 years to see different projections
-4. **Strategy Selection**: Tap a strategy card to select it, then tap "OPEN SCENARIO"
-5. **Scenario Modal**: Swipe through Impact → Implementation → Assessment, swipe down to close
-6. **Commit Decision**: Tap "LET'S DO IT!" to proceed to implementation details
+## Integration Points for AI Team
 
-### Customization
+See `AI_TEAM_INTEGRATION_GUIDE.md` for complete integration documentation.
 
-To create new agents or modify existing ones:
+Main API endpoints needed:
+1. `GET /api/v1/stories` - Story generation
+2. `POST /api/v1/stories/search` - Story search by prompt
+3. `POST /api/v1/playlists/generate` - AI playlist generation
 
-1. Update data in `src/data/cfoAgent.js`
-2. Adjust styles in `src/components/agent.css`
-3. Add new page components if needed
-4. Wire them into `AgentContainer.jsx`
+## Documentation
 
-### Browser Support
+- **AI_TEAM_INTEGRATION_GUIDE.md** - Complete integration guide for AI team
+- **QUICK_START.md** - Quick setup guide
+- **GITHUB_SETUP_STEPS.md** - GitHub repository setup
 
-Optimized for mobile browsers with touch support. Best viewed on:
-- iOS Safari
-- Chrome Mobile
-- Modern mobile browsers with swipe gesture support
+## Browser Support
+
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Mobile responsive design
+- Dark theme optimized
+
+## Development
+
+The prototype currently uses mock data and services. Real API integration points are documented in `AI_TEAM_INTEGRATION_GUIDE.md`.
