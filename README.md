@@ -1,6 +1,6 @@
 # AilyLabs Insights Platform - Prototype
 
-A web application prototype featuring Story Card Modal with 3 display options and Personalizable Playlists functionality.
+This prototype walks through the deep dive from a story card in my agent to deep dive in super agent, using 3 different options for story card to deep dive
 
 ## Features
 
