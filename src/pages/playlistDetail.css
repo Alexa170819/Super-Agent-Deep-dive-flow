@@ -1,0 +1,282 @@
+.playlist-detail-page {
+  min-height: 100vh;
+  background: #000000;
+  color: #ffffff;
+}
+
+.playlist-detail-loading,
+.playlist-detail-error,
+.playlist-detail-empty {
+  padding: 48px 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+}
+
+.playlist-detail-header {
+  padding: 60px 16px 40px;
+  position: relative;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.playlist-detail-header-actions {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.playlist-detail-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.playlist-detail-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.playlist-detail-header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.playlist-detail-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.playlist-detail-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.02em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.playlist-detail-subtitle {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.playlist-detail-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px;
+  background: #000000;
+  flex-wrap: wrap;
+}
+
+.playlist-detail-action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.playlist-detail-play-btn {
+  padding: 12px 32px;
+  border-radius: 6px;
+  border: none;
+  background: #ffffff;
+  color: #000000;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.playlist-detail-play-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+}
+
+.playlist-detail-region-selector {
+  position: relative;
+}
+
+.playlist-detail-region-btn {
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.playlist-detail-region-btn:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.playlist-detail-stories {
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
+}
+
+.playlist-detail-stories-list {
+  background: #000000;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.playlist-detail-actions {
+  padding: 24px 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.playlist-detail-action-btn {
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.playlist-detail-action-btn:hover {
+  border-color: #48FF9B;
+  color: #48FF9B;
+  background: rgba(72, 255, 155, 0.1);
+}
+
+/* Edit Menu */
+.playlist-detail-edit-menu-container {
+  position: relative;
+}
+
+/* Edit button - Option 2: Larger, Prominent */
+.playlist-detail-edit-btn {
+  background: rgba(72, 255, 155, 0.2);
+  border: 2px solid rgba(72, 255, 155, 0.5);
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: #48FF9B;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.playlist-detail-edit-btn:hover {
+  background: rgba(72, 255, 155, 0.3);
+  border-color: rgba(72, 255, 155, 0.7);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(72, 255, 155, 0.3);
+}
+
+.playlist-detail-edit-btn svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.playlist-detail-edit-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 200px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .playlist-detail-title-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .playlist-detail-edit-menu {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.playlist-detail-menu-item {
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.playlist-detail-menu-item:hover {
+  background: rgba(72, 255, 155, 0.1);
+  color: #48FF9B;
+}
+
+.playlist-detail-menu-item svg {
+  flex-shrink: 0;
+}
+
+.playlist-detail-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: transparent;
+}

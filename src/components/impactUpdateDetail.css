@@ -1,0 +1,173 @@
+.impact-update-detail {
+  padding: 24px;
+  color: #ffffff;
+}
+
+.impact-update-detail-header {
+  margin-bottom: 24px;
+}
+
+.impact-update-detail-category {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+
+.impact-update-detail-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.impact-update-detail-time {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.impact-update-detail-status {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.impact-update-detail-comparison {
+  margin-bottom: 32px;
+}
+
+.impact-update-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+.impact-update-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.impact-update-comparison-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.impact-update-comparison-card.expected {
+  border-color: rgba(255, 184, 0, 0.3);
+}
+
+.impact-update-comparison-card.actual {
+  border-color: rgba(72, 255, 155, 0.3);
+}
+
+.impact-update-comparison-card-header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.impact-update-comparison-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.impact-update-comparison-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.impact-update-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.impact-update-metric-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.impact-update-metric-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.impact-update-detail-delta {
+  margin-bottom: 32px;
+  text-align: center;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+.impact-update-delta-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.impact-update-delta-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.impact-update-detail-learnings {
+  margin-bottom: 32px;
+}
+
+.impact-update-learnings-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.impact-update-detail-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.impact-update-action-btn {
+  flex: 1;
+  padding: 14px 24px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.impact-update-action-btn.primary {
+  background: #48FF9B;
+  color: #000000;
+}
+
+.impact-update-action-btn.primary:hover {
+  background: #3de689;
+  transform: translateY(-1px);
+}
+
+.impact-update-action-btn.secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.impact-update-action-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+}

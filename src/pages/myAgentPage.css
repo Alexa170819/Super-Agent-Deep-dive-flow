@@ -1,0 +1,82 @@
+/* Summary card spacing */
+.my-agent-page > .decision-summary-card {
+  margin: 16px 16px 24px;
+}
+
+.my-agent-page {
+  min-height: 100vh;
+  background: #000000;
+  color: #ffffff;
+  padding-bottom: 40px;
+}
+
+.my-agent-impact-updates {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.my-agent-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.my-agent-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.my-agent-badge {
+  background: #48FF9B;
+  color: #000000;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.my-agent-impact-updates-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+}
+
+.my-agent-impact-updates-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.my-agent-impact-updates-scroll > * {
+  flex: 0 0 280px;
+  min-width: 280px;
+}
+
+.my-agent-page-header {
+  padding: 24px 16px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.my-agent-page-branding {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.my-agent-page-brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #48FF9B;
+  letter-spacing: -0.02em;
+}
+
+.my-agent-page-tagline {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.5px;
+}

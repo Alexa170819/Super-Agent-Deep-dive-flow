@@ -1,0 +1,294 @@
+.us-store-performance-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.us-store-performance-card:hover {
+  border-color: #48FF9B;
+  background: rgba(72, 255, 155, 0.05);
+  transform: translateY(-2px);
+}
+
+.us-store-performance-card.selected {
+  border-color: #48FF9B;
+  background: rgba(72, 255, 155, 0.15);
+  box-shadow: 0 4px 12px rgba(72, 255, 155, 0.3);
+}
+
+.us-store-card-checkbox {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #48FF9B;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #48FF9B;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.us-store-card-checkbox:hover {
+  background: rgba(72, 255, 155, 0.2);
+  transform: scale(1.1);
+}
+
+.us-store-performance-card.selected .us-store-card-checkbox {
+  background: #48FF9B;
+  color: #000000;
+  border-color: #48FF9B;
+}
+
+.us-store-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-right: 40px;
+}
+
+.us-store-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.us-store-card-badge {
+  font-size: 0.75rem;
+  color: #48FF9B;
+  background: rgba(72, 255, 155, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(72, 255, 155, 0.4);
+}
+
+.us-store-story-text {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border-left: 3px solid #48FF9B;
+}
+
+.us-store-key-insight {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.us-store-key-insight-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.us-store-key-insight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.us-store-key-insight-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.us-store-key-insight-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #48FF9B;
+}
+
+.us-store-key-insight-change {
+  font-size: 0.875rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.us-store-key-insight-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.us-store-key-insight-icon {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.us-store-key-insight-text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.us-store-performance-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+
+.us-store-performance-indicator {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.us-store-performance-icon {
+  font-size: 1.75rem;
+}
+
+.us-store-performance-text {
+  font-size: 1.25rem;
+}
+
+.us-store-performance-percent {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.us-store-comparison-table {
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.us-store-table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.us-store-table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 16px 12px;
+}
+
+.us-store-table-cell {
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.us-store-comparison-selector {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 20;
+}
+
+.us-store-comparison-selector label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+}
+
+.us-store-comparison-selector select {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 0.875rem;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 21;
+  position: relative;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 4L6 8L10 4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+.us-store-comparison-selector select:hover {
+  border-color: rgba(72, 255, 155, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.us-store-comparison-selector select:focus {
+  outline: none;
+  border-color: #48FF9B;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.us-store-comparison-selector select option {
+  background: #000000;
+  color: #ffffff;
+  padding: 8px;
+}
+
+.us-store-key-metrics {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.us-store-metrics-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 12px;
+}
+
+.us-store-metric-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 0.875rem;
+}
+
+.us-store-metric-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.us-store-metric-value {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.us-store-selected-indicator {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #48FF9B;
+  color: #000000;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}

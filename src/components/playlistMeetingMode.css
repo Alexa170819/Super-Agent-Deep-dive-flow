@@ -1,0 +1,157 @@
+.playlist-meeting-mode {
+  min-height: 100vh;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist-meeting-loading,
+.playlist-meeting-error {
+  padding: 48px 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+}
+
+.playlist-meeting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.playlist-meeting-info {
+  flex: 1;
+}
+
+.playlist-meeting-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.playlist-meeting-progress {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.playlist-meeting-exit {
+  padding: 8px 16px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.playlist-meeting-exit:hover {
+  border-color: #ff4d4d;
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.1);
+}
+
+.playlist-meeting-progress-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.playlist-meeting-progress-fill {
+  height: 100%;
+  background: #48FF9B;
+  transition: width 0.3s ease;
+}
+
+.playlist-meeting-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  cursor: pointer;
+}
+
+.playlist-meeting-story {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.playlist-meeting-story-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.playlist-meeting-story-insight {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.playlist-meeting-story-impact {
+  padding: 24px;
+  border-radius: 12px;
+  background: rgba(72, 255, 155, 0.1);
+  border: 1px solid rgba(72, 255, 155, 0.3);
+}
+
+.playlist-meeting-impact-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.playlist-meeting-impact-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #48FF9B;
+}
+
+.playlist-meeting-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.playlist-meeting-nav-btn {
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.playlist-meeting-nav-btn:hover:not(:disabled) {
+  border-color: #48FF9B;
+  color: #48FF9B;
+  background: rgba(72, 255, 155, 0.1);
+}
+
+.playlist-meeting-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.playlist-meeting-nav-indicator {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}

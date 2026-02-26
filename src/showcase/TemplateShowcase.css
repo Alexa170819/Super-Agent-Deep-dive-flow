@@ -1,0 +1,139 @@
+/* Override global overflow hidden for showcase page */
+body:has(.showcase-container) {
+  overflow: auto !important;
+  position: static !important;
+  height: auto !important;
+}
+
+html:has(.showcase-container) {
+  overflow: auto !important;
+  height: auto !important;
+}
+
+#root:has(.showcase-container) {
+  overflow: auto !important;
+  height: auto !important;
+}
+
+.showcase-container {
+  min-height: 100vh;
+  background: #2a2a2a;
+  padding: 48px 24px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.showcase-header {
+  text-align: center;
+  margin-bottom: 64px;
+  color: white;
+}
+
+.showcase-header h1 {
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  background: linear-gradient(90deg, #48FF9B 0%, #00D9FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.showcase-header p {
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #a6a6a6;
+  margin: 0;
+}
+
+/* Responsive Grid Layout */
+.templates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 375px);
+  gap: 32px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* Individual Template Card */
+.template-card {
+  width: 375px;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Template Header */
+.template-header {
+  padding: 24px 24px 0 24px;
+  background: #1a1a1a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
+  min-height: 144px;
+  box-sizing: border-box;
+}
+
+.template-header h2 {
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #48FF9B;
+  margin: 0 0 12px 0;
+}
+
+.template-description {
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #a6a6a6;
+  margin: 0;
+}
+
+/* Template Preview Container */
+.template-preview {
+  background: #000000;
+  padding: 0 4px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 812px;
+  overflow: hidden;
+}
+
+.template-wrapper {
+  width: 375px;
+  height: 812px;
+  background: #000000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .showcase-container {
+    padding: 32px 16px;
+  }
+
+  .showcase-header h1 {
+    font-size: 36px;
+  }
+
+  .showcase-header p {
+    font-size: 16px;
+  }
+
+  .templates-grid {
+    gap: 24px;
+  }
+
+  .template-preview {
+    padding: 16px;
+  }
+}
+

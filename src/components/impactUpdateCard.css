@@ -1,0 +1,96 @@
+.impact-update-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.impact-update-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(72, 255, 155, 0.3);
+  transform: translateY(-2px);
+}
+
+.impact-update-card.unread {
+  border-color: rgba(72, 255, 155, 0.5);
+  background: rgba(72, 255, 155, 0.05);
+}
+
+.impact-update-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.impact-update-card-category {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.impact-update-card-time {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.impact-update-card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.impact-update-card-comparison {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.impact-update-comparison-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.impact-update-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.impact-update-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.impact-update-value.expected {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.impact-update-value.actual {
+  color: #48FF9B;
+}
+
+.impact-update-status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.impact-update-unread-indicator {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #48FF9B;
+}

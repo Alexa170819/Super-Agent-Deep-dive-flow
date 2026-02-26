@@ -1,0 +1,46 @@
+.playlist-story-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: background 0.2s ease;
+  background: #000000;
+}
+
+.playlist-story-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.playlist-story-item:last-child {
+  border-bottom: none;
+}
+
+.playlist-story-item-trend {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playlist-story-item-text {
+  flex: 1;
+  font-size: 0.875rem;
+  color: #ffffff;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+}
+
+.playlist-story-item-chevron {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}

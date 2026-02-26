@@ -1,0 +1,358 @@
+.my-agent-section {
+  padding: 24px 16px;
+  background: #000000;
+}
+
+.my-agent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.my-agent-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.my-agent-see-all {
+  font-size: 0.875rem;
+  color: #48FF9B;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.my-agent-see-all:hover {
+  opacity: 0.8;
+}
+
+.my-agent-loading,
+.my-agent-empty {
+  text-align: center;
+  padding: 32px 16px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+}
+
+.my-agent-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+}
+
+.my-agent-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.my-agent-cards {
+  display: flex;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+/* Kering Style Cards - Matching Panel 1 Design */
+.my-agent-card-kering {
+  min-width: 180px;
+  max-width: 220px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.my-agent-card-kering.risk {
+  border-color: rgba(255, 77, 77, 0.3);
+}
+
+.my-agent-card-kering.opportunity {
+  border-color: rgba(72, 255, 155, 0.3);
+}
+
+.my-agent-card-kering:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.my-agent-card-kering.risk:hover {
+  border-color: rgba(255, 77, 77, 0.5);
+}
+
+.my-agent-card-kering.opportunity:hover {
+  border-color: rgba(72, 255, 155, 0.5);
+}
+
+.my-agent-card-kering-icon-circle {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+}
+
+.my-agent-card-kering-icon-circle.risk {
+  border-color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.1);
+  color: #ff4d4d;
+}
+
+.my-agent-card-kering-icon-circle.opportunity {
+  border-color: #48FF9B;
+  background: rgba(72, 255, 155, 0.1);
+  color: #48FF9B;
+}
+
+.my-agent-card-kering-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.4;
+  flex: 1;
+}
+
+/* Legacy card styles (keeping for backward compatibility) */
+.my-agent-card {
+  min-width: 280px;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.my-agent-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(72, 255, 155, 0.3);
+  transform: translateY(-2px);
+}
+
+.my-agent-card:active {
+  transform: translateY(0);
+}
+
+.my-agent-card:focus-visible {
+  outline: 2px solid #48FF9B;
+  outline-offset: 2px;
+}
+
+.my-agent-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.my-agent-card-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #48FF9B;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.my-agent-card-badges {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.my-agent-badge {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+.my-agent-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+/* Urgency Badge - Top Right */
+.my-agent-card-urgency-badge-top {
+  display: flex;
+  align-items: center;
+}
+
+.my-agent-card-urgency-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+/* What's Happening Section */
+.my-agent-card-whats-happening {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.my-agent-card-risk-opp-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000000;
+  width: fit-content;
+  margin-bottom: 4px;
+}
+
+.my-agent-card-key-insight {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+/* Financial & Business Impact Section */
+.my-agent-card-impact-section {
+  margin-bottom: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border-left: 3px solid rgba(72, 255, 155, 0.5);
+}
+
+.my-agent-card-impact-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #48FF9B;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.my-agent-card-impact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.my-agent-card-impact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+}
+
+.my-agent-card-impact-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.my-agent-card-impact-text {
+  flex: 1;
+}
+
+/* Decision Section */
+.my-agent-card-decision-section {
+  margin-bottom: 12px;
+}
+
+.my-agent-card-decision-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #48FF9B;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.my-agent-card-primary-action {
+  padding: 12px;
+  background: rgba(72, 255, 155, 0.1);
+  border: 1px solid rgba(72, 255, 155, 0.3);
+  border-radius: 8px;
+  border-left: 3px solid #48FF9B;
+}
+
+.my-agent-card-action-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #48FF9B;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.my-agent-card-action-description {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+/* Time Section */
+.my-agent-card-time-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.my-agent-card-time-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.my-agent-card-time-value {
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.my-agent-card-action {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.my-agent-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 8px;
+  margin-top: auto;
+}
+
+.my-agent-card-arrow {
+  font-size: 1.25rem;
+  color: #48FF9B;
+  font-weight: 300;
+}
